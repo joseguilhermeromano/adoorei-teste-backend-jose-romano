@@ -9,4 +9,13 @@ class Sale extends Model{
     use HasFactory;
     protected $table = 'sales';
     protected $fillable = ['amount'];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->id = date('Ymd');
+        });
+    }
 }

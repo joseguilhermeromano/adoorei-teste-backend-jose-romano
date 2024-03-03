@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('quantity');
-            $table->foreignId('sale_id');
+            $table->string('sale_id', 8);
             $table->foreignId('product_id');
             $table->foreign('sale_id')->references('id')->on('sales');
             $table->foreign('product_id')->references('id')->on('products');
