@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Requests\SaleRequest;
+use App\Interfaces\SaleRepositoryInterface;
+use App\Http\Resources\SaleCollection;
 
 class SaleController extends Controller
 {
     private SaleRepositoryInterface $saleRepository;
 
-    public function __construct(SaçeRepositoryInterface $saleRepository){
+    public function __construct(SaleRepositoryInterface $saleRepository){
         $this->saleRepository = $saleRepository;
     }
 
@@ -44,16 +46,15 @@ class SaleController extends Controller
 
     public function destroy(int $id) :JsonResponse
     {
-        DB::beginTransaction();
-
         $sale =  $this->saleRepository->getById($id);
         $collection = new SaleCollection([$sale]);
 
         if(!$sale) return response()->json(['message' => 'No Sale found'], 404);
 
+        $response = response()->json($collection, 200);
+
         $sale->delete();
 
-        DB::commit();
-        return response()->json($collection, 200);
+        return $response;
     }
 }

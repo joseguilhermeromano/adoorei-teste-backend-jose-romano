@@ -15,7 +15,7 @@ class OrderFactory extends Factory
         return [
             'quantity' => rand(1, 10),
             'sale_id' => rand(1, 10),
-            'product_id' => rand(1, 10),
+            'product_id' => Product::find(rand(1, 10))->id,
         ];
     }
 }

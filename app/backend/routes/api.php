@@ -1,9 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AddressController;
-use App\Http\Controllers\CityController;
-use App\Http\Controllers\StateController;
+use App\Http\Controllers\SaleController;
+use Symfony\Component\HttpFoundation\Response;
+
+Route::fallback(function () {
+    return response()->json([
+        'error' => 'Endpoint not exists.'
+    ], Response::HTTP_NOT_FOUND);
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +25,16 @@ Route::get('/', function () {
     return response()->json([
         'success' => 'Seja bem-vindo à nossa API - ABC'
     ]);
+});
+
+Route::group(['prefix'=>'sales'], function () {
+    Route::get('/', [SaleController::class, 'index']);
+});
+
+Route::group(['prefix'=>'sale'], function () {
+    $idInThePath = '/{id}';
+    Route::get($idInThePath, [SaleController::class, 'show']);
+    Route::post('/', [SaleController::class, 'store']);
+    Route::put($idInThePath, [SaleController::class, 'update']);
+    Route::delete($idInThePath, [SaleController::class, 'destroy']);
 });

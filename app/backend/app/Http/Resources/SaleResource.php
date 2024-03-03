@@ -16,13 +16,13 @@ class SaleResource extends JsonResource
         return [
             "sale_id" => $this->id,
             "amount" => $this->amount,
-            "products" => $this->order->products->map(
-                function ( $product ) {
+            "products" => $this->orders->map(
+                function ( $order ) {
+                    $price = number_format($order->product->price, 0, '', '.');
                     return [
-                        "product_id" => $product->id,
-                        "name" => $product->name,
-                        "price" => $product->price,
-                        "amount" => $this->order->amount
+                        "product_id" => $order->product->id,
+                        "price" =>  $price,
+                        "amount" => $order->quantity
                     ];
                 }
             )

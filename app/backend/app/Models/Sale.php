@@ -24,8 +24,8 @@ class Sale extends Model{
         });
     }
 
-    public function orders()
+    public function orders():HasMany
     {
-        return $this->belongsToMany(Order::class, 'orders', 'sale_id', 'id');
+        return $this->hasMany(Order::class, 'sale_id', 'id');
     }
 }

@@ -17,8 +17,7 @@ class SaleSeeder extends Seeder
     {
         Sale::factory()->count(5)->create()->each(function ($sale) {
             $orders = Order::factory()->count(3)->create([
-                'sale_id' => $sale->id,
-                'product_id' => Product::find(rand(1, 10))->id
+                'sale_id' => $sale->id
             ]);
 
             $totalAmount = $orders->sum(function ($order) {
