@@ -35,7 +35,7 @@ RUN apk --update add  zlib-dev \
     bind-tools\
     bash build-base gcc wget git autoconf libmcrypt-dev libzip-dev zip linux-headers
 
-RUN docker-php-ext-install pdo pdo_mysql session xml bcmath opcache curl
+RUN docker-php-ext-install pdo pdo_mysql session xml bcmath opcache curl calendar
 
 RUN docker-php-ext-install zip simplexml pcntl gd fileinfo
 

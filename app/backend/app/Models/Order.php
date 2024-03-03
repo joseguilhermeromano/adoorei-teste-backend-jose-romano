@@ -12,13 +12,13 @@ class Order extends Model{
     protected $table = 'orders';
     protected $fillable = ['quantity', 'sale_id', 'product_id'];
 
-    public function Sale()
+    public function sale()
     {
         return $this->belongsTo(Sale::class);
     }
 
-    public function Products()
+    public function product()
     {
-        return $this->belongsToMany(Product::class, 'orders', 'sale_id', 'product_id');
+        return $this->belongsTo(Product::class);
     }
 }
