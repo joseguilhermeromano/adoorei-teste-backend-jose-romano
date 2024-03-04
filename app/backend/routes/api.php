@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SaleController;
+use App\Http\Controllers\ProductController;
 use Symfony\Component\HttpFoundation\Response;
 
 Route::fallback(function () {
@@ -37,4 +38,8 @@ Route::group(['prefix'=>'sale'], function () {
     Route::post('/', [SaleController::class, 'store']);
     Route::put($idInThePath, [SaleController::class, 'update']);
     Route::delete($idInThePath, [SaleController::class, 'destroy']);
+});
+
+Route::group(['prefix'=>'products'], function () {
+    Route::get('/', [ProductController::class, 'index']);
 });
