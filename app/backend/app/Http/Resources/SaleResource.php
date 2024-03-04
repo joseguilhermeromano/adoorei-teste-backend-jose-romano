@@ -21,6 +21,7 @@ class SaleResource extends JsonResource
                     $price = number_format($order->product->price, 0, '', '.');
                     return [
                         "product_id" => $order->product->id,
+                        "name" => $order->product->name,
                         "price" =>  $price,
                         "amount" => $order->quantity
                     ];

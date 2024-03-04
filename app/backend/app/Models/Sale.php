@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Sale extends Model{
     use HasFactory;
     protected $table = 'sales';
-    protected $fillable = ['amount'];
+    protected $fillable = ['id','amount'];
     protected $primaryKey = 'id';
     public $incrementing = false;
     protected $keyType = 'string';
@@ -19,13 +19,22 @@ class Sale extends Model{
     {
         parent::boot();
 
-        static::creating(function ($model) {
-            if (empty($model->id)) $model->id = date('Ymd');
+        static::saving(function ($model) {
+            if (empty($model->id)) {
+                $model->id = date('Ymd');
+            }
         });
     }
 
     public function orders():HasMany
     {
         return $this->hasMany(Order::class, 'sale_id', 'id');
+    }
+
+    public function amount()
+    {
+        return $this->orders->sum(function ($order) {
+            return $order->quantity * $order->product->price;
+        });
     }
 }

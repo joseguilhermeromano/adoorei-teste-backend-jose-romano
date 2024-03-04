@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Requests\SaleRequest;
 use App\Interfaces\SaleRepositoryInterface;
 use App\Http\Resources\SaleCollection;
+use App\Models\Order;
+use DB;
+use Exception;
 
 class SaleController extends Controller
 {
@@ -36,12 +38,77 @@ class SaleController extends Controller
 
     public function store(SaleRequest $request):JsonResponse
     {
-        //
+        DB::beginTransaction();
+
+        $requestData = $request->only([
+            'sale_id',
+            'products'
+        ]);
+
+        $data = [
+            'id' => $requestData['sale_id'],
+            'amount' => 0
+        ];
+
+        $sale = $this->saleRepository->create($data);
+
+        foreach($requestData['products'] as $prod){
+            $order = new Order([
+                'quantity' => $prod['amount'],
+                'sale_id' => $sale->id,
+                'product_id' => $prod['product_id']
+            ]);
+
+            $sale->orders()->save($order);
+        }
+
+        $sale->update(['amount' => $sale->amount()]);
+
+        $collection = new SaleCollection([$sale]);
+
+        DB::commit();
+
+        return response()->json($collection, 201);
     }
 
     public function update(int $id, SaleRequest $request): JsonResponse
     {
-        //
+        DB::beginTransaction();
+
+        $requestData = $request->only([
+            'sale_id',
+            'products'
+        ]);
+
+        $sale = $this->saleRepository->getById($id);
+
+        if($sale->orders->isEmpty()){
+            throw new Exception('Sale not found');
+        }
+
+        $sale->orders->each(function ($order) {
+            $order->delete();
+        });
+
+        foreach($requestData['products'] as $prod){
+            $order = new Order([
+                'quantity' => $prod['amount'],
+                'sale_id' => $sale->id,
+                'product_id' => $prod['product_id']
+            ]);
+
+            $sale->orders()->save($order);
+        }
+
+        $sale = $this->saleRepository->getById($id);
+
+        $sale->update(['amount' => $sale->amount()]);
+
+        $collection = new SaleCollection([$sale]);
+
+        DB::commit();
+
+        return response()->json($collection, 201);
     }
 
     public function destroy(int $id) :JsonResponse
