@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->string('id', 8)->primary();
             $table->unsignedBigInteger('amount');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

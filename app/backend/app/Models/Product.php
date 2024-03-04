@@ -9,4 +9,13 @@ class Product extends Model{
     use HasFactory;
     protected $table = 'products';
     protected $fillable = ['name', 'price', 'description'];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'price' => 'float',
+    ];
 }
