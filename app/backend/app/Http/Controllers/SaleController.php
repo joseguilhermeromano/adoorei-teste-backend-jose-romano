@@ -41,12 +41,10 @@ class SaleController extends Controller
         DB::beginTransaction();
 
         $requestData = $request->only([
-            'sale_id',
             'products'
         ]);
 
         $data = [
-            'id' => $requestData['sale_id'],
             'amount' => 0
         ];
 
@@ -76,7 +74,6 @@ class SaleController extends Controller
         DB::beginTransaction();
 
         $requestData = $request->only([
-            'sale_id',
             'products'
         ]);
 
@@ -108,7 +105,7 @@ class SaleController extends Controller
 
         DB::commit();
 
-        return response()->json($collection, 201);
+        return response()->json($collection, 200);
     }
 
     public function destroy(int $id) :JsonResponse
@@ -123,5 +120,34 @@ class SaleController extends Controller
         $sale->delete();
 
         return $response;
+    }
+
+    public function addProduct(SaleRequest $request, $id)
+    {
+        $sale = $this->saleRepository->getById($id);
+
+        if(!$sale) return response()->json(['message' => 'No Sale found'], 404);
+
+        $requestData = $request->only([
+            'products'
+        ]);
+
+        foreach($requestData['products'] as $prod){
+            $order = new Order([
+                'quantity' => $prod['amount'],
+                'sale_id' => $sale->id,
+                'product_id' => $prod['product_id']
+            ]);
+
+            $sale->orders()->save($order);
+        }
+
+        $sale->update(['amount' => $sale->amount()]);
+
+        $sale = $this->saleRepository->getById($id);
+
+        $collection = new SaleCollection([$sale]);
+
+        return response()->json($collection, 200);
     }
 }

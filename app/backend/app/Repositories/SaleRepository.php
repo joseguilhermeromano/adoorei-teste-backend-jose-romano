@@ -11,7 +11,7 @@ class SaleRepository implements SaleRepositoryInterface
 
     public function getAll()
     {
-        return Sale::orderBy('id', 'desc')->get();
+        return Sale::orderBy('id', 'asc')->get();
     }
 
     public function getById($id)

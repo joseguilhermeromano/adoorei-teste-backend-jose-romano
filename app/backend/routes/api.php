@@ -5,12 +5,6 @@ use App\Http\Controllers\SaleController;
 use App\Http\Controllers\ProductController;
 use Symfony\Component\HttpFoundation\Response;
 
-Route::fallback(function () {
-    return response()->json([
-        'error' => 'Endpoint not exists.'
-    ], Response::HTTP_NOT_FOUND);
-});
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -36,6 +30,7 @@ Route::group(['prefix'=>'sale'], function () {
     $idInThePath = '/{id}';
     Route::get($idInThePath, [SaleController::class, 'show']);
     Route::post('/', [SaleController::class, 'store']);
+    Route::post('/{id}/products', [SaleController::class, 'addProduct']);
     Route::put($idInThePath, [SaleController::class, 'update']);
     Route::delete($idInThePath, [SaleController::class, 'destroy']);
 });

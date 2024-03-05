@@ -13,20 +13,6 @@ class Sale extends Model{
     use SoftDeletes;
     protected $table = 'sales';
     protected $fillable = ['id','amount'];
-    protected $primaryKey = 'id';
-    public $incrementing = false;
-    protected $keyType = 'string';
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::saving(function ($model) {
-            if (empty($model->id)) {
-                $model->id = date('Ymd');
-            }
-        });
-    }
 
     public function orders():HasMany
     {
@@ -38,5 +24,18 @@ class Sale extends Model{
         return $this->orders->sum(function ($order) {
             return $order->quantity * $order->product->price;
         });
+    }
+
+    /**
+     * Return customized id sale
+     *
+     * @param  mixed  $value
+     * @return string
+     */
+    public function getIdCustom()
+    {
+        $date = $this->created_at->format('Ymd');
+
+        return $date . $this->id;
     }
 }

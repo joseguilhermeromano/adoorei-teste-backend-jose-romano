@@ -13,14 +13,7 @@ class SaleFactory extends Factory
     public function definition()
     {
         return [
-            "id" => $this->generateSaleId(),
             "amount" => 0
         ];
-    }
-
-    protected function generateSaleId(){
-        $randomDate = GenerateFakerSaleId::createRandomDate(2024, 03);
-
-        return $randomDate->format('Ymd');
     }
 }

@@ -14,19 +14,23 @@ class SaleResource extends JsonResource
     public function toArray($request): array
     {
         return [
-            "sale_id" => $this->id,
+            "sale_id" => $this->getIdCustom(),
             "amount" => $this->amount,
-            "products" => $this->orders->map(
-                function ( $order ) {
-                    $price = number_format($order->product->price, 0, '', '.');
-                    return [
-                        "product_id" => $order->product->id,
-                        "name" => $order->product->name,
-                        "price" =>  $price,
-                        "amount" => $order->quantity
-                    ];
-                }
-            )
+            "products" => $this->orders
+                ->sortBy(function($order){
+                    return $order->product_id;
+                })
+                ->values()
+                ->map(function ( $order ) {
+                        $price = number_format($order->product->price, 0, '', '.');
+                        return [
+                            "product_id" => $order->product->id,
+                            "name" => $order->product->name,
+                            "price" =>  $price,
+                            "amount" => $order->quantity
+                        ];
+                    }
+                )
         ];
     }
 }

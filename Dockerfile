@@ -75,6 +75,28 @@ EXPOSE 9003
 RUN apk --update add nginx
 
 #################################
+##        SONAR SCANNER        ##
+#################################
+
+RUN apk add openjdk11 openjdk11-jre-headless
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+
+RUN apk update && \
+    apk add --no-cache unzip
+
+RUN curl -L -o /tmp/sonar-scanner-cli.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.0.2966-linux.zip && \
+    unzip /tmp/sonar-scanner-cli.zip -d /opt && \
+    rm /tmp/sonar-scanner-cli.zip && \
+    ln -s /opt/sonar-scanner-5.0.0.2966-linux /opt/sonar-scanner && \
+    ln -s /opt/sonar-scanner/bin/sonar-scanner /usr/local/bin/sonar-scanner && \
+    ln -s /opt/sonar-scanner/jre/lib/server/libjvm.so /opt/sonar-scanner/jre/lib
+
+# Define a variável de ambiente PATH para incluir o diretório do SonarScanner
+ENV PATH="${PATH}:/opt/sonar-scanner/bin"
+
+RUN echo 'export PATH="/opt/sonar-scanner/bin:$PATH"' >> ~/.bashrc source ~/.bashrc
+
+#################################
 ##         SUPERVISOR          ##
 #################################
 
