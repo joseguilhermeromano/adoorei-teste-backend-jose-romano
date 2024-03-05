@@ -1,0 +1,29 @@
+2024-03-05 13:16:44,061 INFO Set uid to user 0 succeeded
+2024-03-05 13:16:44,075 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 13:16:44,078 INFO supervisord started with pid 1
+2024-03-05 13:16:45,080 INFO spawned: 'nginx' with pid 9
+2024-03-05 13:16:45,086 INFO spawned: 'php-fpm' with pid 10
+2024-03-05 13:16:46,150 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 13:16:46,150 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 13:17:21,750 WARN received SIGQUIT indicating exit request
+2024-03-05 13:17:21,750 INFO waiting for nginx, php-fpm to die
+2024-03-05 13:17:21,755 INFO stopped: php-fpm (exit status 0)
+2024-03-05 13:17:21,892 INFO stopped: nginx (exit status 0)
+2024-03-05 13:18:54,518 INFO Set uid to user 0 succeeded
+2024-03-05 13:18:54,527 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 13:18:54,530 INFO supervisord started with pid 1
+2024-03-05 13:18:55,537 INFO spawned: 'nginx' with pid 16
+2024-03-05 13:18:55,546 INFO spawned: 'php-fpm' with pid 17
+2024-03-05 13:18:56,582 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 13:18:56,582 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 13:19:20,770 WARN received SIGQUIT indicating exit request
+2024-03-05 13:19:20,772 INFO waiting for nginx, php-fpm to die
+2024-03-05 13:19:20,781 INFO stopped: php-fpm (exit status 0)
+2024-03-05 13:19:20,899 INFO stopped: nginx (exit status 0)
+2024-03-05 13:20:40,597 INFO Set uid to user 0 succeeded
+2024-03-05 13:20:40,821 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 13:20:40,824 INFO supervisord started with pid 1
+2024-03-05 13:20:41,827 INFO spawned: 'nginx' with pid 16
+2024-03-05 13:20:41,830 INFO spawned: 'php-fpm' with pid 17
+2024-03-05 13:20:42,889 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 13:20:42,889 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

@@ -15,7 +15,7 @@ services:
       - 'host.docker.internal:host-gateway'
       - 'abc.app.br:127.0.0.1'
     volumes:
-      - ./app/backend/:/var/www/
+      - ./:/var/www/
       - ./docker/php/config/timezone.ini:/usr/local/etc/php/conf.d/timezone.ini
       - ./docker/php/config/php.ini:/usr/local/etc/php/php.ini
       - ./docker/php/config/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
@@ -30,7 +30,7 @@ services:
       - sonarqube
 
   sonarqube:
-    image: sonarqube
+    image: sonarqube:community
     ports:
       - "9000:9000"
     networks:
