@@ -257,6 +257,7 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
 
 ## Documentação do Swagger
 
+![Documentação completa usando SWAGGER](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_5.png)
 
 ## Muito Obrigado!!!
 
