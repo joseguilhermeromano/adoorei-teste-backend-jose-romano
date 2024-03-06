@@ -41,9 +41,9 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
 
 ## Rotas & Exemplos 
 
-1 - Listar produtos disponíveis: 
+### Listar produtos disponíveis: 
 
-  - Rota http://abc.app.br/api/products
+  1 - Rota http://abc.app.br/api/products
 
 
   Exemplo de retorno: 
@@ -103,7 +103,7 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
 ]
   ```
   
-  - Rota http://abc.app.br/api/sales
+  2 - Rota http://abc.app.br/api/sales
 
   ```json
   [
@@ -229,18 +229,28 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
   }
 ]
   ```
-2 - Rota http://abc.app.br/api/sale/1 
-  * GET: traz os dados de uma venda específica
-  * PUT: Atualiza uma venda
-  * DELETE: Cancela uma venda (Estou usando Softdeletes)
+  3 - Rota http://abc.app.br/api/sale/1 
+    * GET: traz os dados de uma venda específica
+    * PUT: Atualiza uma venda
+    * DELETE: Cancela uma venda (Estou usando Softdeletes)
 
-3 - Rota http://abc.app.br/api/sale
-  * POST: Registra uma nova venda 
+  4 - Rota http://abc.app.br/api/sale
+    * POST: Registra uma nova venda 
 
-4 - Rota http://abc.app.br/api/sale/1/products
-  * POST: Adiciona produto a uma venda de id 1
+  5 - Rota http://abc.app.br/api/sale/1/products
+    * POST: Adiciona produto a uma venda de id 1
+
+## Consultas de Vendas e Produtos
+
+![Consulta da Lista de Vendas](image_1.png)
+![Consulta da Lista de Produtos](image_2.png)
 
 ## Resultados do Sonarqube (Cobertura de Testes Automatizados)
+
+![Status PASSED no projeto supervisonado pelo sonarqube](image_3.png)
+![Mais de 80% de cobertura geral da API](image_4.png)
+
+## Documentação do Swagger
 
 
 ## Muito Obrigado!!!
