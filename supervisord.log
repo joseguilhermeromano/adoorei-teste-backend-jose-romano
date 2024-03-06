@@ -1,29 +1,294 @@
-2024-03-05 13:16:44,061 INFO Set uid to user 0 succeeded
-2024-03-05 13:16:44,075 CRIT Server 'unix_http_server' running without any HTTP authentication checking
-2024-03-05 13:16:44,078 INFO supervisord started with pid 1
-2024-03-05 13:16:45,080 INFO spawned: 'nginx' with pid 9
-2024-03-05 13:16:45,086 INFO spawned: 'php-fpm' with pid 10
-2024-03-05 13:16:46,150 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
-2024-03-05 13:16:46,150 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
-2024-03-05 13:17:21,750 WARN received SIGQUIT indicating exit request
-2024-03-05 13:17:21,750 INFO waiting for nginx, php-fpm to die
-2024-03-05 13:17:21,755 INFO stopped: php-fpm (exit status 0)
-2024-03-05 13:17:21,892 INFO stopped: nginx (exit status 0)
-2024-03-05 13:18:54,518 INFO Set uid to user 0 succeeded
-2024-03-05 13:18:54,527 CRIT Server 'unix_http_server' running without any HTTP authentication checking
-2024-03-05 13:18:54,530 INFO supervisord started with pid 1
-2024-03-05 13:18:55,537 INFO spawned: 'nginx' with pid 16
-2024-03-05 13:18:55,546 INFO spawned: 'php-fpm' with pid 17
-2024-03-05 13:18:56,582 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
-2024-03-05 13:18:56,582 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
-2024-03-05 13:19:20,770 WARN received SIGQUIT indicating exit request
-2024-03-05 13:19:20,772 INFO waiting for nginx, php-fpm to die
-2024-03-05 13:19:20,781 INFO stopped: php-fpm (exit status 0)
-2024-03-05 13:19:20,899 INFO stopped: nginx (exit status 0)
-2024-03-05 13:20:40,597 INFO Set uid to user 0 succeeded
-2024-03-05 13:20:40,821 CRIT Server 'unix_http_server' running without any HTTP authentication checking
-2024-03-05 13:20:40,824 INFO supervisord started with pid 1
-2024-03-05 13:20:41,827 INFO spawned: 'nginx' with pid 16
-2024-03-05 13:20:41,830 INFO spawned: 'php-fpm' with pid 17
-2024-03-05 13:20:42,889 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
-2024-03-05 13:20:42,889 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 14:18:56,443 INFO Set uid to user 0 succeeded
+2024-03-05 14:18:56,673 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 14:18:56,676 INFO supervisord started with pid 1
+2024-03-05 14:18:57,680 INFO spawned: 'nginx' with pid 94
+2024-03-05 14:18:57,739 INFO spawned: 'php-fpm' with pid 95
+2024-03-05 14:18:58,742 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 14:18:58,744 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 14:24:17,060 WARN received SIGQUIT indicating exit request
+2024-03-05 14:24:17,061 INFO waiting for nginx, php-fpm to die
+2024-03-05 14:24:17,070 INFO stopped: php-fpm (exit status 0)
+2024-03-05 14:24:17,181 INFO stopped: nginx (exit status 0)
+2024-03-05 14:26:50,145 INFO Set uid to user 0 succeeded
+2024-03-05 14:26:50,150 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 14:26:50,153 INFO supervisord started with pid 1
+2024-03-05 14:26:51,156 INFO spawned: 'nginx' with pid 9
+2024-03-05 14:26:51,158 INFO spawned: 'php-fpm' with pid 10
+2024-03-05 14:26:52,185 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 14:26:52,185 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 14:30:23,208 WARN received SIGQUIT indicating exit request
+2024-03-05 14:30:23,208 INFO waiting for nginx, php-fpm to die
+2024-03-05 14:30:23,212 INFO stopped: php-fpm (exit status 0)
+2024-03-05 14:30:23,325 INFO stopped: nginx (exit status 0)
+2024-03-05 14:30:54,794 INFO Set uid to user 0 succeeded
+2024-03-05 14:30:54,799 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 14:30:54,802 INFO supervisord started with pid 1
+2024-03-05 14:30:55,807 INFO spawned: 'nginx' with pid 18
+2024-03-05 14:30:55,811 INFO spawned: 'php-fpm' with pid 19
+2024-03-05 14:30:56,836 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 14:30:56,836 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:09:45,965 WARN received SIGQUIT indicating exit request
+2024-03-05 15:09:45,974 INFO waiting for nginx, php-fpm to die
+2024-03-05 15:09:46,091 INFO stopped: php-fpm (exit status 0)
+2024-03-05 15:09:46,275 INFO stopped: nginx (exit status 0)
+2024-03-05 15:10:29,135 INFO Set uid to user 0 succeeded
+2024-03-05 15:10:29,144 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 15:10:29,146 INFO supervisord started with pid 1
+2024-03-05 15:10:30,149 INFO spawned: 'nginx' with pid 58
+2024-03-05 15:10:30,158 INFO spawned: 'php-fpm' with pid 59
+2024-03-05 15:10:31,275 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:10:31,275 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:12:06,011 WARN received SIGQUIT indicating exit request
+2024-03-05 15:12:06,011 INFO waiting for nginx, php-fpm to die
+2024-03-05 15:12:06,016 INFO stopped: php-fpm (exit status 0)
+2024-03-05 15:12:06,156 INFO stopped: nginx (exit status 0)
+2024-03-05 15:12:45,796 INFO Set uid to user 0 succeeded
+2024-03-05 15:12:45,804 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 15:12:45,808 INFO supervisord started with pid 1
+2024-03-05 15:12:46,810 INFO spawned: 'nginx' with pid 61
+2024-03-05 15:12:46,813 INFO spawned: 'php-fpm' with pid 62
+2024-03-05 15:12:47,884 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:12:47,884 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:13:05,522 WARN received SIGQUIT indicating exit request
+2024-03-05 15:13:05,523 INFO waiting for nginx, php-fpm to die
+2024-03-05 15:13:05,528 INFO stopped: php-fpm (exit status 0)
+2024-03-05 15:13:05,635 INFO stopped: nginx (exit status 0)
+2024-03-05 15:13:43,095 INFO Set uid to user 0 succeeded
+2024-03-05 15:13:43,101 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 15:13:43,105 INFO supervisord started with pid 1
+2024-03-05 15:13:44,111 INFO spawned: 'nginx' with pid 14
+2024-03-05 15:13:44,118 INFO spawned: 'php-fpm' with pid 15
+2024-03-05 15:13:45,156 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:13:45,157 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:14:18,399 WARN received SIGQUIT indicating exit request
+2024-03-05 15:14:18,401 INFO waiting for nginx, php-fpm to die
+2024-03-05 15:14:18,421 INFO stopped: php-fpm (exit status 0)
+2024-03-05 15:14:18,545 INFO stopped: nginx (exit status 0)
+2024-03-05 15:15:00,466 INFO Set uid to user 0 succeeded
+2024-03-05 15:15:00,475 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 15:15:00,479 INFO supervisord started with pid 1
+2024-03-05 15:15:01,483 INFO spawned: 'nginx' with pid 67
+2024-03-05 15:15:01,487 INFO spawned: 'php-fpm' with pid 68
+2024-03-05 15:15:02,537 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:15:02,537 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:17:55,690 WARN received SIGQUIT indicating exit request
+2024-03-05 15:17:55,691 INFO waiting for nginx, php-fpm to die
+2024-03-05 15:17:55,696 INFO stopped: php-fpm (exit status 0)
+2024-03-05 15:17:55,834 INFO stopped: nginx (exit status 0)
+2024-03-05 15:18:37,017 INFO Set uid to user 0 succeeded
+2024-03-05 15:18:37,028 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 15:18:37,031 INFO supervisord started with pid 1
+2024-03-05 15:18:38,034 INFO spawned: 'nginx' with pid 69
+2024-03-05 15:18:38,039 INFO spawned: 'php-fpm' with pid 70
+2024-03-05 15:18:39,113 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:18:39,114 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:33:43,703 WARN received SIGQUIT indicating exit request
+2024-03-05 15:33:43,704 INFO waiting for nginx, php-fpm to die
+2024-03-05 15:33:43,710 INFO stopped: php-fpm (exit status 0)
+2024-03-05 15:33:43,797 INFO stopped: nginx (exit status 0)
+2024-03-05 15:34:22,061 INFO Set uid to user 0 succeeded
+2024-03-05 15:34:22,065 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 15:34:22,068 INFO supervisord started with pid 1
+2024-03-05 15:34:23,073 INFO spawned: 'nginx' with pid 59
+2024-03-05 15:34:23,078 INFO spawned: 'php-fpm' with pid 60
+2024-03-05 15:34:24,106 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 15:34:24,106 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 16:02:06,422 WARN received SIGQUIT indicating exit request
+2024-03-05 16:02:06,426 INFO waiting for nginx, php-fpm to die
+2024-03-05 16:02:06,439 INFO stopped: php-fpm (exit status 0)
+2024-03-05 16:02:06,553 INFO stopped: nginx (exit status 0)
+2024-03-05 16:02:40,348 INFO Set uid to user 0 succeeded
+2024-03-05 16:02:40,353 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 16:02:40,356 INFO supervisord started with pid 1
+2024-03-05 16:02:41,361 INFO spawned: 'nginx' with pid 20
+2024-03-05 16:02:41,367 INFO spawned: 'php-fpm' with pid 21
+2024-03-05 16:02:42,399 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 16:02:42,399 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:29:37,548 WARN received SIGQUIT indicating exit request
+2024-03-05 18:29:37,562 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:29:37,589 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:29:37,758 INFO stopped: nginx (exit status 0)
+2024-03-05 18:30:06,648 INFO Set uid to user 0 succeeded
+2024-03-05 18:30:06,655 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:30:06,659 INFO supervisord started with pid 1
+2024-03-05 18:30:07,661 INFO spawned: 'nginx' with pid 53
+2024-03-05 18:30:07,663 INFO spawned: 'php-fpm' with pid 54
+2024-03-05 18:30:08,697 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:30:08,697 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:32:26,459 WARN received SIGQUIT indicating exit request
+2024-03-05 18:32:26,462 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:32:26,480 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:32:26,619 INFO stopped: nginx (exit status 0)
+2024-03-05 18:33:09,424 INFO Set uid to user 0 succeeded
+2024-03-05 18:33:09,437 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:33:09,439 INFO supervisord started with pid 1
+2024-03-05 18:33:10,441 INFO spawned: 'nginx' with pid 55
+2024-03-05 18:33:10,445 INFO spawned: 'php-fpm' with pid 56
+2024-03-05 18:33:11,558 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:33:11,559 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:34:32,946 WARN received SIGQUIT indicating exit request
+2024-03-05 18:34:32,948 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:34:32,981 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:34:33,080 INFO stopped: nginx (exit status 0)
+2024-03-05 18:35:09,596 INFO Set uid to user 0 succeeded
+2024-03-05 18:35:09,601 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:35:09,603 INFO supervisord started with pid 1
+2024-03-05 18:35:10,607 INFO spawned: 'nginx' with pid 58
+2024-03-05 18:35:10,610 INFO spawned: 'php-fpm' with pid 59
+2024-03-05 18:35:11,637 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:35:11,638 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:36:43,340 WARN received SIGQUIT indicating exit request
+2024-03-05 18:36:43,342 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:36:43,349 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:36:43,457 INFO stopped: nginx (exit status 0)
+2024-03-05 18:37:19,834 INFO Set uid to user 0 succeeded
+2024-03-05 18:37:19,839 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:37:19,842 INFO supervisord started with pid 1
+2024-03-05 18:37:20,847 INFO spawned: 'nginx' with pid 60
+2024-03-05 18:37:20,853 INFO spawned: 'php-fpm' with pid 61
+2024-03-05 18:37:21,882 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:37:21,882 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:38:44,245 WARN received SIGQUIT indicating exit request
+2024-03-05 18:38:44,246 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:38:44,256 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:38:44,400 INFO stopped: nginx (exit status 0)
+2024-03-05 18:39:20,380 INFO Set uid to user 0 succeeded
+2024-03-05 18:39:20,385 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:39:20,389 INFO supervisord started with pid 1
+2024-03-05 18:39:21,394 INFO spawned: 'nginx' with pid 61
+2024-03-05 18:39:21,402 INFO spawned: 'php-fpm' with pid 62
+2024-03-05 18:39:22,440 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:39:22,440 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:40:55,811 WARN received SIGQUIT indicating exit request
+2024-03-05 18:40:55,812 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:40:55,819 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:40:55,918 INFO stopped: nginx (exit status 0)
+2024-03-05 18:42:03,409 INFO Set uid to user 0 succeeded
+2024-03-05 18:42:03,415 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:42:03,418 INFO supervisord started with pid 1
+2024-03-05 18:42:04,421 INFO spawned: 'nginx' with pid 9
+2024-03-05 18:42:04,424 INFO spawned: 'php-fpm' with pid 10
+2024-03-05 18:42:05,453 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:42:05,453 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:45:00,988 WARN received SIGQUIT indicating exit request
+2024-03-05 18:45:00,990 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:45:01,009 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:45:01,143 INFO stopped: nginx (exit status 0)
+2024-03-05 18:45:40,372 INFO Set uid to user 0 succeeded
+2024-03-05 18:45:40,382 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:45:40,385 INFO supervisord started with pid 1
+2024-03-05 18:45:41,390 INFO spawned: 'nginx' with pid 73
+2024-03-05 18:45:41,395 INFO spawned: 'php-fpm' with pid 74
+2024-03-05 18:45:42,442 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:45:42,442 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:48:05,531 WARN received SIGQUIT indicating exit request
+2024-03-05 18:48:05,534 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:48:05,552 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:48:05,663 INFO stopped: nginx (exit status 0)
+2024-03-05 18:48:44,253 INFO Set uid to user 0 succeeded
+2024-03-05 18:48:44,259 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:48:44,262 INFO supervisord started with pid 1
+2024-03-05 18:48:45,265 INFO spawned: 'nginx' with pid 62
+2024-03-05 18:48:45,268 INFO spawned: 'php-fpm' with pid 63
+2024-03-05 18:48:46,333 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:48:46,333 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:50:14,676 WARN received SIGQUIT indicating exit request
+2024-03-05 18:50:14,676 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:50:14,680 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:50:14,765 INFO stopped: nginx (exit status 0)
+2024-03-05 18:50:56,419 INFO Set uid to user 0 succeeded
+2024-03-05 18:50:56,428 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:50:56,432 INFO supervisord started with pid 1
+2024-03-05 18:50:57,435 INFO spawned: 'nginx' with pid 74
+2024-03-05 18:50:57,438 INFO spawned: 'php-fpm' with pid 75
+2024-03-05 18:50:58,465 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:50:58,466 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:54:14,807 WARN received SIGQUIT indicating exit request
+2024-03-05 18:54:14,808 INFO waiting for nginx, php-fpm to die
+2024-03-05 18:54:14,813 INFO stopped: php-fpm (exit status 0)
+2024-03-05 18:54:14,931 INFO stopped: nginx (exit status 0)
+2024-03-05 18:54:47,846 INFO Set uid to user 0 succeeded
+2024-03-05 18:54:47,852 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 18:54:47,854 INFO supervisord started with pid 1
+2024-03-05 18:54:48,856 INFO spawned: 'nginx' with pid 15
+2024-03-05 18:54:48,858 INFO spawned: 'php-fpm' with pid 16
+2024-03-05 18:54:49,879 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:54:49,879 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 18:58:23,469 INFO reaped unknown pid 129 (exit status 0)
+2024-03-05 19:03:18,840 WARN received SIGQUIT indicating exit request
+2024-03-05 19:03:18,848 INFO waiting for nginx, php-fpm to die
+2024-03-05 19:03:18,881 INFO stopped: php-fpm (exit status 0)
+2024-03-05 19:03:18,991 INFO stopped: nginx (exit status 0)
+2024-03-05 19:03:51,540 INFO Set uid to user 0 succeeded
+2024-03-05 19:03:51,545 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 19:03:51,548 INFO supervisord started with pid 1
+2024-03-05 19:03:52,553 INFO spawned: 'nginx' with pid 16
+2024-03-05 19:03:52,560 INFO spawned: 'php-fpm' with pid 17
+2024-03-05 19:03:53,593 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:03:53,593 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:05:52,014 WARN received SIGQUIT indicating exit request
+2024-03-05 19:05:52,015 INFO waiting for nginx, php-fpm to die
+2024-03-05 19:05:52,019 INFO stopped: php-fpm (exit status 0)
+2024-03-05 19:05:52,150 INFO stopped: nginx (exit status 0)
+2024-03-05 19:06:24,763 INFO Set uid to user 0 succeeded
+2024-03-05 19:06:24,768 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 19:06:24,770 INFO supervisord started with pid 1
+2024-03-05 19:06:25,777 INFO spawned: 'nginx' with pid 15
+2024-03-05 19:06:25,786 INFO spawned: 'php-fpm' with pid 16
+2024-03-05 19:06:26,812 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:06:26,812 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:06:50,768 WARN received SIGQUIT indicating exit request
+2024-03-05 19:06:50,770 INFO waiting for nginx, php-fpm to die
+2024-03-05 19:06:50,785 INFO stopped: php-fpm (exit status 0)
+2024-03-05 19:06:50,910 INFO stopped: nginx (exit status 0)
+2024-03-05 19:07:30,766 INFO Set uid to user 0 succeeded
+2024-03-05 19:07:30,775 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 19:07:30,784 INFO supervisord started with pid 1
+2024-03-05 19:07:31,789 INFO spawned: 'nginx' with pid 64
+2024-03-05 19:07:31,795 INFO spawned: 'php-fpm' with pid 65
+2024-03-05 19:07:32,892 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:07:32,892 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:24:38,581 WARN received SIGQUIT indicating exit request
+2024-03-05 19:24:38,582 INFO waiting for nginx, php-fpm to die
+2024-03-05 19:24:38,588 INFO stopped: php-fpm (exit status 0)
+2024-03-05 19:24:38,695 INFO stopped: nginx (exit status 0)
+2024-03-05 19:25:35,079 INFO Set uid to user 0 succeeded
+2024-03-05 19:25:35,090 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 19:25:35,093 INFO supervisord started with pid 1
+2024-03-05 19:25:36,097 INFO spawned: 'nginx' with pid 16
+2024-03-05 19:25:36,103 INFO spawned: 'php-fpm' with pid 17
+2024-03-05 19:25:37,156 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:25:37,156 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:30:16,674 WARN received SIGQUIT indicating exit request
+2024-03-05 19:30:16,697 INFO waiting for nginx, php-fpm to die
+2024-03-05 19:30:16,767 INFO stopped: php-fpm (exit status 0)
+2024-03-05 19:30:16,918 INFO stopped: nginx (exit status 0)
+2024-03-05 19:30:58,513 INFO Set uid to user 0 succeeded
+2024-03-05 19:30:58,583 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 19:30:58,587 INFO supervisord started with pid 1
+2024-03-05 19:30:59,592 INFO spawned: 'nginx' with pid 62
+2024-03-05 19:30:59,596 INFO spawned: 'php-fpm' with pid 63
+2024-03-05 19:31:00,922 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:31:00,931 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:33:43,097 WARN received SIGQUIT indicating exit request
+2024-03-05 19:33:43,098 INFO waiting for nginx, php-fpm to die
+2024-03-05 19:33:43,107 INFO stopped: php-fpm (exit status 0)
+2024-03-05 19:33:43,232 INFO stopped: nginx (exit status 0)
+2024-03-05 19:34:26,017 INFO Set uid to user 0 succeeded
+2024-03-05 19:34:26,023 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 19:34:26,026 INFO supervisord started with pid 1
+2024-03-05 19:34:27,028 INFO spawned: 'nginx' with pid 56
+2024-03-05 19:34:27,030 INFO spawned: 'php-fpm' with pid 57
+2024-03-05 19:34:28,048 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:34:28,049 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:36:41,503 WARN received SIGQUIT indicating exit request
+2024-03-05 19:36:41,503 INFO waiting for nginx, php-fpm to die
+2024-03-05 19:36:41,509 INFO stopped: php-fpm (exit status 0)
+2024-03-05 19:36:41,631 INFO stopped: nginx (exit status 0)
+2024-03-05 19:37:26,911 INFO Set uid to user 0 succeeded
+2024-03-05 19:37:26,933 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2024-03-05 19:37:26,936 INFO supervisord started with pid 1
+2024-03-05 19:37:27,939 INFO spawned: 'nginx' with pid 63
+2024-03-05 19:37:27,942 INFO spawned: 'php-fpm' with pid 64
+2024-03-05 19:37:29,102 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-03-05 19:37:29,103 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

@@ -1,13 +1,11 @@
 <?php
 
 namespace Tests\Feature;
-
-// use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ApiProductTest extends TestCase
+class ProductControllerTest extends TestCase
 {
-    public function test_the_application_return_list_products_generated_by_factory_and_seeder():void
+    public function testIndexReturnListProductsGeneratedByFactoryAndSeeder():void
     {
         $response = $this->get('/api/products');
 

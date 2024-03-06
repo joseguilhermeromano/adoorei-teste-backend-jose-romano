@@ -12,7 +12,7 @@ class Sale extends Model{
     use HasFactory;
     use SoftDeletes;
     protected $table = 'sales';
-    protected $fillable = ['id','amount'];
+    protected $fillable = ['id','amount', 'created_at'];
 
     public function orders():HasMany
     {

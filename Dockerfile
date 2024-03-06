@@ -41,7 +41,7 @@ RUN docker-php-ext-install zip simplexml pcntl gd fileinfo
 
 WORKDIR /var/www
 
-COPY ./app/backend .
+COPY . .
 
 EXPOSE 9004
 
@@ -95,6 +95,13 @@ RUN curl -L -o /tmp/sonar-scanner-cli.zip https://binaries.sonarsource.com/Distr
 ENV PATH="${PATH}:/opt/sonar-scanner/bin"
 
 RUN echo 'export PATH="/opt/sonar-scanner/bin:$PATH"' >> ~/.bashrc source ~/.bashrc
+
+#################################
+##          NODE.JS           ##
+#################################
+
+RUN apk update && \
+    apk add --no-cache nodejs npm
 
 #################################
 ##         SUPERVISOR          ##

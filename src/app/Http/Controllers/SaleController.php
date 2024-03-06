@@ -14,7 +14,8 @@ class SaleController extends Controller
 {
     private SaleRepositoryInterface $saleRepository;
 
-    public function __construct(SaleRepositoryInterface $saleRepository){
+    public function __construct(SaleRepositoryInterface $saleRepository)
+    {
         $this->saleRepository = $saleRepository;
     }
 
@@ -29,14 +30,17 @@ class SaleController extends Controller
     public function show(int $id): JsonResponse
     {
         $sale = $this->saleRepository->getById($id);
-        $collection = new SaleCollection([$sale]);
 
-        if(!$sale) return response()->json(['message' => 'No Sale found'], 404);
+        if (!$sale) {
+            return response()->json(['error' => 'No sale found'], 404);
+        }
+
+        $collection = new SaleCollection([$sale]);
 
         return response()->json($collection, 200);
     }
 
-    public function store(SaleRequest $request):JsonResponse
+    public function store(SaleRequest $request): JsonResponse
     {
         DB::beginTransaction();
 
@@ -50,7 +54,7 @@ class SaleController extends Controller
 
         $sale = $this->saleRepository->create($data);
 
-        foreach($requestData['products'] as $prod){
+        foreach ($requestData['products'] as $prod) {
             $order = new Order([
                 'quantity' => $prod['amount'],
                 'sale_id' => $sale->id,
@@ -79,7 +83,7 @@ class SaleController extends Controller
 
         $sale = $this->saleRepository->getById($id);
 
-        if($sale->orders->isEmpty()){
+        if ($sale->orders->isEmpty()) {
             throw new Exception('Sale not found');
         }
 
@@ -87,7 +91,7 @@ class SaleController extends Controller
             $order->delete();
         });
 
-        foreach($requestData['products'] as $prod){
+        foreach ($requestData['products'] as $prod) {
             $order = new Order([
                 'quantity' => $prod['amount'],
                 'sale_id' => $sale->id,
@@ -108,12 +112,14 @@ class SaleController extends Controller
         return response()->json($collection, 200);
     }
 
-    public function destroy(int $id) :JsonResponse
+    public function destroy(int $id): JsonResponse
     {
         $sale =  $this->saleRepository->getById($id);
         $collection = new SaleCollection([$sale]);
 
-        if(!$sale) return response()->json(['message' => 'No Sale found'], 404);
+        if (!$sale) {
+            return response()->json(['error' => 'No Sale found'], 404);
+        }
 
         $response = response()->json($collection, 200);
 
@@ -126,13 +132,15 @@ class SaleController extends Controller
     {
         $sale = $this->saleRepository->getById($id);
 
-        if(!$sale) return response()->json(['message' => 'No Sale found'], 404);
+        if (!$sale) {
+            return response()->json(['error' => 'No Sale found'], 404);
+        }
 
         $requestData = $request->only([
             'products'
         ]);
 
-        foreach($requestData['products'] as $prod){
+        foreach ($requestData['products'] as $prod) {
             $order = new Order([
                 'quantity' => $prod['amount'],
                 'sale_id' => $sale->id,

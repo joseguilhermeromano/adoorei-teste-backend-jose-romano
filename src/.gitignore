@@ -17,5 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-supervisord.pid
-supervisord.log
+/supervisord.pid
+/supervisord.log
+/.scannerwork
