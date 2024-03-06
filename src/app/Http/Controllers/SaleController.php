@@ -10,6 +10,21 @@ use App\Models\Order;
 use DB;
 use Exception;
 
+/**
+ * @OA\Info(
+ *     title="API ABC",
+ *     version="1.0.0",
+ *     description="Methods of sale endpoint",
+ *     @OA\Contact(
+ *         email="jose_guilherme_romano@hotmail.com",
+ *         name="José G Romano"
+ *     ),
+ *     @OA\License(
+ *         name="MIT",
+ *         url="https://opensource.org/licenses/MIT"
+ *     )
+ * )
+ */
 class SaleController extends Controller
 {
     private SaleRepositoryInterface $saleRepository;
@@ -19,6 +34,56 @@ class SaleController extends Controller
         $this->saleRepository = $saleRepository;
     }
 
+    /**
+     * @OA\Get(
+     *     path="/api/sales",
+     *     summary="Get all sales",
+     *     @OA\Response(
+     *         response=200,
+     *         description="Return a collection of sales",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(
+     *                 property="sale_id",
+     *                 type="string",
+     *                 example="202403051"
+     *             ),
+     *             @OA\Property(
+     *                 property="amount",
+     *                 type="integer",
+     *                 example="35000"
+     *             ),
+     *             @OA\Property(
+     *                 property="products",
+     *                 type="array",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     @OA\Property(
+     *                         property="product_id",
+     *                         type="integer",
+     *                         example="1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="name",
+     *                         type="string",
+     *                         example="Product 1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="price",
+     *                         type="string",
+     *                         example="3.500"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="amount",
+     *                         type="integer",
+     *                         example="10"
+     *                     )
+     *                 )
+     *             )
+     *         )
+     *     )
+     * )
+     */
     public function index(): JsonResponse
     {
         $sales = $this->saleRepository->getAll();
@@ -27,6 +92,67 @@ class SaleController extends Controller
         return response()->json($collection, 200);
     }
 
+    /**
+     * @OA\Get(
+     *     path="/api/sale/{id}",
+     *     summary="Get a specific sale",
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         required=true,
+     *         description="ID of the sale",
+     *         @OA\Schema(type="integer")
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Return a single sale",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(
+     *                 property="sale_id",
+     *                 type="string",
+     *                 example="202403051"
+     *             ),
+     *             @OA\Property(
+     *                 property="amount",
+     *                 type="integer",
+     *                 example="35000"
+     *             ),
+     *             @OA\Property(
+     *                 property="products",
+     *                 type="array",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     @OA\Property(
+     *                         property="product_id",
+     *                         type="integer",
+     *                         example="1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="name",
+     *                         type="string",
+     *                         example="Product 1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="price",
+     *                         type="string",
+     *                         example="3.500"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="amount",
+     *                         type="integer",
+     *                         example="10"
+     *                     )
+     *                 )
+     *             )
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="No sale found"
+     *     )
+     * )
+     */
     public function show(int $id): JsonResponse
     {
         $sale = $this->saleRepository->getById($id);
@@ -40,6 +166,57 @@ class SaleController extends Controller
         return response()->json($collection, 200);
     }
 
+    /**
+     * @OA\Post(
+     *     path="/api/sale",
+     *     summary="Create a new sale",
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             required={"products"},
+     *             @OA\Property(
+     *                 property="products",
+     *                 type="array",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     required={"product_id", "amount"},
+     *                     @OA\Property(property="product_id", type="integer"),
+     *                     @OA\Property(property="amount", type="integer")
+     *                 )
+     *             )
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=201,
+     *         description="Sale created successfully",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(
+     *                 property="status",
+     *                 type="string",
+     *                 example="success"
+     *             ),
+     *             @OA\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     @OA\Property(
+     *                         property="id",
+     *                         type="integer",
+     *                         example="1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="name",
+     *                         type="string",
+     *                         example="Product 1"
+     *                     )
+     *                 )
+     *             )
+     *         )
+     *     )
+     * )
+     */
     public function store(SaleRequest $request): JsonResponse
     {
         DB::beginTransaction();
@@ -73,6 +250,68 @@ class SaleController extends Controller
         return response()->json($collection, 201);
     }
 
+    /**
+     * @OA\Put(
+     *     path="/api/sale/{id}",
+     *     summary="Update a sale",
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         required=true,
+     *         description="ID of the sale",
+     *         @OA\Schema(type="integer")
+     *     ),
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             required={"products"},
+     *             @OA\Property(
+     *                 property="products",
+     *                 type="array",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     required={"product_id", "amount"},
+     *                     @OA\Property(property="product_id", type="integer"),
+     *                     @OA\Property(property="amount", type="integer")
+     *                 )
+     *             )
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Sale updated successfully",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(
+     *                 property="status",
+     *                 type="string",
+     *                 example="success"
+     *             ),
+     *             @OA\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     @OA\Property(
+     *                         property="id",
+     *                         type="integer",
+     *                         example="1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="name",
+     *                         type="string",
+     *                         example="Product 1"
+     *                     )
+     *                 )
+     *             )
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="No sale found"
+     *     )
+     * )
+     */
     public function update(int $id, SaleRequest $request): JsonResponse
     {
         DB::beginTransaction();
@@ -112,6 +351,65 @@ class SaleController extends Controller
         return response()->json($collection, 200);
     }
 
+    /**
+     * @OA\Delete(
+     *     path="/sale/{id}",
+     *     summary="Cancel a sale by ID (using SoftDeletes)",
+     *     description="Deletes a sale from the database by its ID.",
+     *     operationId="deleteSaleById",
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         required=true,
+     *         description="ID of the sale to delete",
+     *         @OA\Schema(
+     *             type="integer",
+     *             format="int64"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Sale deleted successfully",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(
+     *                 property="status",
+     *                 type="string",
+     *                 example="success"
+     *             ),
+     *             @OA\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     @OA\Property(
+     *                         property="id",
+     *                         type="integer",
+     *                         example="1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="name",
+     *                         type="string",
+     *                         example="Product 1"
+     *                     )
+     *                 )
+     *             )
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Sale not found",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(
+     *                 property="error",
+     *                 type="string",
+     *                 example="No Sale found"
+     *             )
+     *         )
+     *     )
+     * )
+     */
     public function destroy(int $id): JsonResponse
     {
         $sale =  $this->saleRepository->getById($id);
@@ -128,6 +426,90 @@ class SaleController extends Controller
         return $response;
     }
 
+    /**
+     * @OA\Post(
+     *     path="/sale/{id}/products",
+     *     summary="Add a product to a sale",
+     *     description="Adds a product to an existing sale in the database.",
+     *     operationId="addProductToSale",
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         required=true,
+     *         description="ID of the sale to which the product will be added",
+     *         @OA\Schema(
+     *             type="integer",
+     *             format="int64"
+     *         )
+     *     ),
+     *     @OA\RequestBody(
+     *         required=true,
+     *         description="Product data to be added to the sale",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             required={"products"},
+     *             @OA\Property(
+     *                 property="products",
+     *                 type="array",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     @OA\Property(
+     *                         property="product_id",
+     *                         type="integer",
+     *                         example="1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="amount",
+     *                         type="integer",
+     *                         example="5"
+     *                     )
+     *                 )
+     *             )
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Product added successfully",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(
+     *                 property="status",
+     *                 type="string",
+     *                 example="success"
+     *             ),
+     *             @OA\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\Items(
+     *                     type="object",
+     *                     @OA\Property(
+     *                         property="id",
+     *                         type="integer",
+     *                         example="1"
+     *                     ),
+     *                     @OA\Property(
+     *                         property="name",
+     *                         type="string",
+     *                         example="Product 1"
+     *                     )
+     *                 )
+     *             )
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Sale not found",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(
+     *                 property="error",
+     *                 type="string",
+     *                 example="No Sale found"
+     *             )
+     *         )
+     *     )
+     * )
+     */
     public function addProduct(SaleRequest $request, $id)
     {
         $sale = $this->saleRepository->getById($id);

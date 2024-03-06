@@ -4,7 +4,7 @@
 <img src="https://adoorei.s3.us-east-2.amazonaws.com/images/loje_teste_logoadoorei_1662476663.png" width="160"></a>
 </p>
 
-# Desafio Concluído com sucesso
+# Desafio Concluído com SUCESSO
 
 Olá, prezados!! 😃🚀🚀🚀
 
@@ -12,7 +12,7 @@ Olá, prezados!! 😃🚀🚀🚀
 
 Adorei cada etapa do processo, muito obrigado pelo espaço!!
 
-## Tecnologias utilizadas
+## Tecnologias Utilizadas
 
 * Laravel 10
 * PHP 8.3.3
@@ -240,15 +240,20 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
   5 - Rota http://abc.app.br/api/sale/1/products
     * POST: Adiciona produto a uma venda de id 1
 
+
 ## Consultas de Vendas e Produtos
+
 
 ![Consulta da Lista de Vendas](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_1.png)
 ![Consulta da Lista de Produtos](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_2.png)
 
+
 ## Resultados do Sonarqube (Cobertura de Testes Automatizados)
+
 
 ![Status PASSED no projeto supervisonado pelo sonarqube](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_3.png)
 ![Mais de 80% de cobertura geral da API](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_4.png)
+
 
 ## Documentação do Swagger
 
