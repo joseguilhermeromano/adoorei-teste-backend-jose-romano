@@ -9,36 +9,45 @@
 Olá, prezados!! 😃🚀🚀🚀
 
 É com muita alegria que elaboro esse documento exibindo todos os resultados da construção da nossa API. 
+
 Adorei cada etapa do processo, muito obrigado pelo espaço!!
 
 ## Tecnologias utilizadas
 
-1 - Laravel 10 
-2 - PHP 8.3.3
-3 - Sonarqube
-4 - Sqlite
-5 - Swagger
-6 - Docker
-7 - PHPUnit
-8 - Ngnix
-9 - Supervisor Linux
-10 - Git e Composer
+* Laravel 10
+* PHP 8.3.3
+* Sonarqube
+* Sqlite
+* Swagger
+* Docker
+* PHPUnit
+* Ngnix
+* Supervisor Linux
+* Git e Composer
 
 
 ## Como usar a API
 
 1 - Configure o seu arquivo hosts para acessar a api pelo endereço correto: 127.0.0.1 abc.app.br
+
 2 - Faça o clone do fork e rode o comando para subir os containers do docker: docker-compose up -d 
+
 3 - Aguarde até carregar os dois containers (Sonarqube e Backend)
+
 4 - Acesse a api no browser: http://abc.app.br/api/products
+
 5 - Acesse aos relatórios de cobertura de testes do Sonarqube em http://localhost:9000
+
 
 ## Rotas & Exemplos 
 
 1 - Listar produtos disponíveis: 
+
   - Rota http://abc.app.br/api/products
 
+
   Exemplo de retorno: 
+  
   ```json
   [
   {
@@ -92,7 +101,7 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
     "description": "Aparelho dual chip na cor cinza"
   }
 ]
-  ´´´
+  ```
   
 
 
