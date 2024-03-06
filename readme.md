@@ -47,7 +47,7 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
 
 
   Exemplo de retorno: 
-  
+
   ```json
   [
   {
@@ -103,6 +103,144 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
 ]
   ```
   
+  - Rota http://abc.app.br/api/sales
+
+  ```json
+  [
+  {
+    "sale_id": "202403041",
+    "amount": 34400,
+    "products": [
+      {
+        "product_id": 1,
+        "name": "Celular 1",
+        "price": "1.800",
+        "amount": 1
+      },
+      {
+        "product_id": 2,
+        "name": "Celular 2",
+        "price": "3.200",
+        "amount": 1
+      },
+      {
+        "product_id": 3,
+        "name": "Celular 3",
+        "price": "9.800",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "sale_id": "202403042",
+    "amount": 54400,
+    "products": [
+      {
+        "product_id": 1,
+        "name": "Celular 1",
+        "price": "1.800",
+        "amount": 3
+      },
+      {
+        "product_id": 5,
+        "name": "Celular 5",
+        "price": "3.500",
+        "amount": 8
+      },
+      {
+        "product_id": 7,
+        "name": "Celular 7",
+        "price": "3.000",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "sale_id": "202403043",
+    "amount": 93000,
+    "products": [
+      {
+        "product_id": 7,
+        "name": "Celular 7",
+        "price": "3.000",
+        "amount": 7
+      },
+      {
+        "product_id": 10,
+        "name": "Celular 10",
+        "price": "6.000",
+        "amount": 10
+      },
+      {
+        "product_id": 10,
+        "name": "Celular 10",
+        "price": "6.000",
+        "amount": 2
+      }
+    ]
+  },
+  {
+    "sale_id": "202403044",
+    "amount": 74600,
+    "products": [
+      {
+        "product_id": 2,
+        "name": "Celular 2",
+        "price": "3.200",
+        "amount": 8
+      },
+      {
+        "product_id": 5,
+        "name": "Celular 5",
+        "price": "3.500",
+        "amount": 6
+      },
+      {
+        "product_id": 6,
+        "name": "Celular 6",
+        "price": "4.000",
+        "amount": 7
+      }
+    ]
+  },
+  {
+    "sale_id": "202403045",
+    "amount": 93500,
+    "products": [
+      {
+        "product_id": 5,
+        "name": "Celular 5",
+        "price": "3.500",
+        "amount": 5
+      },
+      {
+        "product_id": 9,
+        "name": "Celular 9",
+        "price": "4.000",
+        "amount": 4
+      },
+      {
+        "product_id": 10,
+        "name": "Celular 10",
+        "price": "6.000",
+        "amount": 10
+      }
+    ]
+  }
+]
+  ```
+  - Rota http://abc.app.br/api/sale/1 
+  * GET: traz os dados de uma venda específica
+  * PUT: Atualiza uma venda
+  * DELETE: Cancela uma venda (Estou usando Softdeletes)
+
+  - Rota http://abc.app.br/api/sale
+  * POST: Registra uma nova venda 
+
+  - Rota http://abc.app.br/api/sale/1/products
+  * POST: Adiciona produto a uma venda de id 1
+
+## Resultados do Sonarqube (Cobertura de Testes Automatizados)
 
 
 ## Muito Obrigado!!!
