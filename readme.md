@@ -229,15 +229,15 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
   }
 ]
   ```
-  - Rota http://abc.app.br/api/sale/1 
+2 - Rota http://abc.app.br/api/sale/1 
   * GET: traz os dados de uma venda específica
   * PUT: Atualiza uma venda
   * DELETE: Cancela uma venda (Estou usando Softdeletes)
 
-  - Rota http://abc.app.br/api/sale
+3 - Rota http://abc.app.br/api/sale
   * POST: Registra uma nova venda 
 
-  - Rota http://abc.app.br/api/sale/1/products
+4 - Rota http://abc.app.br/api/sale/1/products
   * POST: Adiciona produto a uma venda de id 1
 
 ## Resultados do Sonarqube (Cobertura de Testes Automatizados)
