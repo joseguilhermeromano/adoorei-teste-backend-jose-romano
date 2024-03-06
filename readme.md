@@ -242,13 +242,13 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
 
 ## Consultas de Vendas e Produtos
 
-![Consulta da Lista de Vendas](image_1.png)
-![Consulta da Lista de Produtos](image_2.png)
+![Consulta da Lista de Vendas](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_1.png)
+![Consulta da Lista de Produtos](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_2.png)
 
 ## Resultados do Sonarqube (Cobertura de Testes Automatizados)
 
-![Status PASSED no projeto supervisonado pelo sonarqube](image_3.png)
-![Mais de 80% de cobertura geral da API](image_4.png)
+![Status PASSED no projeto supervisonado pelo sonarqube](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_3.png)
+![Mais de 80% de cobertura geral da API](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_4.png)
 
 ## Documentação do Swagger
 
