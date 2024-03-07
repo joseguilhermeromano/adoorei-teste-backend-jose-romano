@@ -259,6 +259,13 @@ Adorei cada etapa do processo, muito obrigado pelo espaço!!
 
 ![Documentação completa usando SWAGGER](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_5.png)
 
+## Documentação no Postman
+
+Segue o link da documentação no Postman: https://documenter.getpostman.com/view/6355036/2sA2xfZZPx
+
+![Documentação completa no Postman](https://github.com/joseguilhermeromano/adoorei-teste-backend-jose-romano/blob/main/assets/images/image_6.png)
+
+
 ## Muito Obrigado!!!
 
 Deus abençoe o nosso match!! 🙏🙏🙏
